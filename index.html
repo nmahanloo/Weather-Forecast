@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Author: Nima Mahanloo -->
+<!-- CST 336 HW 3: Fetch and Web APIs -->
+<!-- Nov. 14, 2023 -->
+<html>
+
+  <head>
+    <title>WeatherNow!</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <header>
+      <h1 id="title">WeatherNow!</h1>
+    </header>
+    <main>
+      <br/>
+      <form id="inputForm">
+        Please fill in all of the following boxes.<br><br/>
+        City: <input type="text" id="city_name" placeholder="city or town"><br>
+        State: <input type="text" id="state_name" placeholder="state or province"><br>
+        Country: <input type="text" id="country_name" placeholder="country"><br>
+        <span id="addressError"></span><br>
+        Units:    
+          <input type="radio" id="metric" name="units" value="metric">Metric
+          <input type="radio" id="imperial" name="units" value="imperial">Imperial<br><br/>
+        <input type="button" id="go" value="Go!">
+      </form>
+      <br/>
+      <div id="display-weather">
+        <br/>
+        <div id="location-div">
+          <span id="city" class="focus"></span>, <span id="state"></span>, <span id="country"></span><br>
+          Latitude: <span id="latitude"></span>, Longitude: <span id="longitude"></span>
+        </div>
+        <div id="time-div">
+          Sunrise: <span id="sunrise"></span>, Sunset: <span id="sunset"></span>
+          <br>
+          Local Time: <span id="local-time"></span>
+        </div>
+        <div id="icon-div"></div>
+        <div id="temp-div">
+          <span id="temp" class="focus"></span><span class="focus">&deg; </span>
+          <span id="unit" class="focus"></span><br>
+          <span id="weather"></span> (<span id="weather-dsc"></span>)<br>
+          Feels Like: <span id="feels-like"></span>&deg;<br>
+          Low: <span id="temp-min"></span>&deg;, High: <span id="temp-max"></span>&deg;
+        </div>
+        <br/>
+        <div id="weather-div">
+          Wind: <span id="wind-speed"></span> <span id="dist-unit"></span>, <span id="wind-degree"></span>&deg; Deg<br>
+          Cloudiness: <span id="clouds"></span>%<br>
+          Visibility: <span id="visibility"></span> <span id="dist"></span><br>
+          Humidity: <span id="humidity"></span>%<br>
+          Atmosphere Presssure (Sea level): <span id="pressure"></span> hPa<br><br>
+        </div>
+        <div id="update-div">
+          Last Update: <span id="last-sync"></span> (Your time)<br><br/>
+        </div>
+      </div>
+      <script src="js/script.js"></script>
+    </main>
+    <footer>
+      <img src="img/csumb.png" alt="Logo of CSUMB" style="width: 103px; height: auto;"/>
+      <br/>
+      CST336 Internet Programming. 2023 &copy; Nima Mahanloo <br/>
+      <strong>Disclaimer:</strong> The information in this webpage is fictitious.<br/>
+      It is used for academic purposes only.
+    </footer>
+  </body>
+
+</html>
